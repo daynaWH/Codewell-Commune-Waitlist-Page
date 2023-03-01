@@ -1,0 +1,201 @@
+* {
+    box-sizing: border-box;
+}
+
+.main-box {
+    background-color: rgb(247, 249, 253);
+    margin: 1rem;
+    padding: 1rem 6rem 5rem 6rem;
+    border-radius: 10px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    font-family: 'Nunito Sans', sans-serif;
+    line-height: 1.5rem;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.navicon {
+    display: none;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+ul li {
+    padding: 1rem;
+}
+
+nav a, .light-text {
+    color: rgb(84, 84, 84);
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+button {
+    background-color: rgb(53, 41, 97);
+    color: #ffffff;
+    padding: 1.2rem 1.8rem;
+    border: 0;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+.purple-box {
+    background-color: rgb(53, 41, 97);
+    color: rgb(205, 196, 229);
+    width: 28rem;
+    border-radius: 20px;
+    text-align: center;
+    line-height: 2.5rem;
+}
+
+span a {
+    color: rgb(205, 196, 229);
+    font-weight: bolder;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    align-items: center;
+    justify-items: center;
+    margin: 4rem auto 5rem;
+}
+
+h1 {
+    color: rgb(52, 50, 80);
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 120%;
+}
+
+.description {
+    margin: -2rem auto 1rem;
+}
+
+form {
+    display: flex;
+    column-gap: 15px;
+    max-height: 4rem;
+}
+
+input {
+    padding: 1.3rem 6rem;
+    border: rgb(224, 224, 224) solid 0.8px;
+    border-radius: 5px;
+}
+
+input::placeholder {
+    color: rgb(180, 180, 180);
+    position: absolute;
+    left: 20px;
+    font-size: 1.1rem;
+}
+
+main img {
+    width: 22rem;
+}
+
+footer p {
+    font-weight: bold;
+}
+
+footer img {
+    margin-right: 1rem;
+}
+
+@media (max-width: 768px) {
+    .main-box {
+        padding: 5rem;
+    }
+
+    body {
+        text-align: center;
+    }
+
+    .navicon {
+        display: block;
+        cursor: pointer;
+    }
+
+    .navicon:hover+ul, nav:focus-within > ul, header nav ul:hover {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        right: 1.5rem;
+        align-items: center;
+        text-align: center;
+    }
+
+    header nav ul {
+        display: none;
+        background-color: #ffffff;
+        position: absolute;
+    }
+
+    nav:hover ul {
+        display: block;
+    }
+
+    nav ul li:hover {
+        background-color: rgb(247, 249, 253);
+    }
+
+    main img {
+        display: none;
+    }
+
+    main {
+        grid-template-columns: 100%;
+    }
+
+    .purple-box {
+        margin: 0 auto;
+    }
+
+    .description {
+        margin-bottom: 2.5rem;
+    }
+
+    form {
+        justify-content: center;
+    }
+
+    footer {
+        text-align: left;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 3rem;
+    }
+
+   .main-left, .purple-box {
+        width: 20rem;
+   }
+
+   .purple-box {
+        font-size: 1.2rem;
+        border-radius: 40px;
+        line-height: 2rem;
+   }
+
+   form {
+        flex-direction: column;
+        row-gap: 15px;
+   }
+}
